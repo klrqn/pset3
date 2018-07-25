@@ -1,0 +1,7 @@
+TODO
+
+read the sheet music for happy bday
+
+figure out which notes are being played
+
+wriet down the ascii representation of those notes in a file called bday.txt
