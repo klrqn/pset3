@@ -4,4 +4,50 @@ read the sheet music for happy bday
 
 figure out which notes are being played
 
-wriet down the ascii representation of those notes in a file called bday.txt
+write down the ascii representation of those notes in a file called bday.txt
+
+
+helpers.c - where you'll be writing all of your code
+
+TODO:
+We are asking you to implement 3 different functions in helpers.c
+
+implement is_rest
+implement duration
+implement frequency
+
+1. is_rest
+bool is_rest(string s)
+function that takes a string and returns a bool
+
+if s represents a rest, return true, else false.
+
+
+2. duration
+int duration(string s)
+take a fraction as a string ("1/8", "1/4", "3/8" for ex)
+assume numerator and denominator are each one digit
+assume that the fraction works out to a whole number of eighth notes
+
+string[0] - numerator
+string[2] - denominatior
+
+convert to number of eigth notes. CAREFUL - convert char to a number.
+
+
+3. frequency
+int frequency(string note)
+ex. note = "A#4" ("# is an accidental")
+
+TODO
+- parse the string into a note and its octave
+- calculate the frequency of the note in the given octave
+- return the frequency (in hertz)
+
+A4 = 440 Hz STANDARD
+
+- for every semitone up we move, we multiply the frequency by 2^1/12
+- for every semitone down we move, we divide the frequency by 2^1/12
+
+
+https://www.reddit.com/r/cs50/comments/7yop63/music_pset3_music_please_help_me_because_i_am/duimglo/?st=jei0kvyc&sh=19467602
