@@ -39,6 +39,11 @@ convert to number of eigth notes. CAREFUL - convert char to a number.
 int frequency(string note)
 ex. note = "A#4" ("# is an accidental")
 
+The frequencies of one octave’s notes differ from those of adjacent octaves' notes by a factor of two. For instance, the frequency
+of A3 is 220 Hz (i.e., half that of A4), while the frequency of A5 is 880 Hz (i.e., twice that of A4). More generally, the frequency, f,
+of some note is 2n/12 × 440, where n is the number of semitones from that note to A4, where n is negative if that note is below
+(i.e., to the left of) A4 and positive if that note is above (i.e., to the right of) A4.
+
 TODO
 - parse the string into a note and its octave
 - calculate the frequency of the note in the given octave

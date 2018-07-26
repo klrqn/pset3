@@ -20,4 +20,14 @@ int frequency(string note)
 bool is_rest(string s)
 {
     // TODO
+    // if s represents a rest, return true
+    if (s == "");
+    {
+        return true;
+    }
+    // else return false
+    else
+    {
+        return false;
+    }
 }
