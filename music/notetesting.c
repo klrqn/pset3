@@ -1,36 +1,16 @@
-// Helper functions for music
-
 #include <cs50.h>
 #include <string.h>
 #include <stdio.h>
-#include <math.h>
+#include  <math.h>
 
 #include "helpers.h"
 
-// Converts a fraction formatted as X/Y to eighths
-int duration(string fraction)
+int main(void)
 {
-    // TODO
-    // Complete the implementation of duration in helpers.c. Recall that this function should take as input as a string a fraction and
-    // convert it into some integral number of eighths. You may assume that duration will only be passed a string formatted as X/Y,
-    // whereby each of X and Y is a positive decimal digit, and Y is, moreover, a power of 2.
+    string note = "A#4";
 
-    // label numerator and denominator
-    int num = (int) fraction[0] - '0';
-    int den = (int) fraction[2] - '0';
-
-    // maths - see 'durationtesting.c' ... took way too long :()
-    int numberofbeats = (num * 8 / den);
-
-    // return number of eigth note beats
-    return numberofbeats;
-}
-
-// Calculates frequency (in Hz) of a note
-int frequency(string note)
-{
+    // get octave depending on whether the note is accidental or not
     int octave = (int) (note[strlen(note) - 1] - '0');
-
     // // test octave
     // note = get_string();
     // printf("octave: %i\n", octave);
@@ -95,22 +75,7 @@ int frequency(string note)
 
     // round and return as int
     int result = round(freq);
-    return result;
     printf("frequency: %f\n", freq);
-}
-
-// Determines whether a string represents a rest
-bool is_rest(string s)
-{
-    // TODO
-    // if s represents a rest, return true
-    if (s[0] == '\0')
-    {
-        return true;
-    }
-    // else return false
-    else
-    {
-        return false;
-    }
+    printf("result   : %d\n", result);
+    return result;
 }
