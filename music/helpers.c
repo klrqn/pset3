@@ -29,7 +29,7 @@ int duration(string fraction)
 // Calculates frequency (in Hz) of a note
 int frequency(string note)
 {
-    int octave = (int) (note[strlen(note) - 1] - '0');
+    int octave = (int)(note[strlen(note) - 1] - '0');
 
     // // test octave
     // note = get_string();
